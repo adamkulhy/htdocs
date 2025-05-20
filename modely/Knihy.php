@@ -1,15 +1,7 @@
 <?php
 
-class Uvod
+class Knihy
 {
-    public function vratZanry() {
-        $sql = "
-            SELECT *
-            FROM zanry
-        ";
-        return Db::dotazVsechny($sql);
-    }
-
     public function vratKnihy() {
         $zanry = $_GET['zanry'] ?? [];
         if ($zanry) {
@@ -20,25 +12,24 @@ class Uvod
             WHERE kz.id_knih IN ($placeholders)
             GROUP BY k.id_knih
         ";
-        return Db::dotazVsechny($sql, [...$zanry]);
+            return Db::dotazVsechny($sql, [...$zanry]);
         }
         else {
             $sql = "
             SELECT *
             FROM knihy
         ";
-        return Db::dotazVsechny($sql);
+            return Db::dotazVsechny($sql);
         }
     }
 
-    public function vratAutory() {
+    public function pridatKnihu(): void
+    {
+        Db::vloz("knihy", [$_POST["jmeno_knih"], $_POST["id_aut"], $_POST["obsah_knih"]]);
+        $idKnihy = Db::idPoslednihoVlozeneho();
+        foreach ($_POST["zanr"] as $zanr){
+            Db::vloz("kniha_zanr", [$idKnihy, $zanr]);
+        }
 
-            $sql = "
-            SELECT *
-            FROM autori
-        ";
-            return Db::dotazVsechny($sql);
     }
-
-
 }

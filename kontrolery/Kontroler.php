@@ -2,7 +2,7 @@
 abstract class Kontroler {
     protected $pohled = ""; // název souboru s pohledem (bez přípony .phtml)
     protected $data = [];
-    abstract public function zpracuj($parametry);
+        abstract public function zpracuj($parametry);
 
     public function vypisPohled() {
         extract($this->data);
@@ -10,7 +10,14 @@ abstract class Kontroler {
     }
 
     public function presmeruj($url) {
-        header("Location: /knihovna/$url");
+        header("Location: /$url");
         exit;
     }
+
+    protected function nactiSpolecnaData()
+    {
+        $this->data["zanry"] = (new Zanry())->vratZanry();
+        $this->data["autori"] = (new Autori())->vratAutory();
+    }
+
 }

@@ -1,5 +1,5 @@
-<form>
-    <div class="relative mb-3 w-1/2">
+<form method="post" >
+    <div class="relative mb-4 w-1/2">
         <input
             type="text"
             class=" peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary"
@@ -7,13 +7,44 @@
         />
         <label
             for="vyhledavaniInput"
-            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary  motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
-        >Vyhledávání
+            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.65rem] peer-focus:scale-[0.8] peer-focus:text-primary  motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
+        >Jméno knihy
         </label>
     </div>
+    <div class="relative mb-4 w-1/2">
+        <input
+                type="text"
+                class=" peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary"
+                id="vyhledavaniInput"
+        />
+        <label
+                for="vyhledavaniInput"
+                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.65rem] peer-focus:scale-[0.8] peer-focus:text-primary  motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
+        >Autor
+        </label>
+    </div>
+    <div class="mb-3">
+        <label
+                for="formFile"
+                class="mb-2 inline-block text-neutral-500 dark:text-neutral-400"
+        >Default file input example</label
+        >
+        <input
+                class="relative m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border border-solid border-secondary-500 bg-transparent bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-surface transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:me-3 file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-e file:border-solid file:border-inherit file:bg-transparent file:px-3  file:py-[0.32rem] file:text-surface focus:border-primary focus:text-gray-700 focus:shadow-inset focus:outline-none dark:border-white/70 dark:text-white  file:dark:text-white"
+                type="file"
+                id="formFile" />
+    </div>
+    <div class="mb-3">
+        <label for="zanry">Žánr</label>
+        <select multiple name="id_zanr[]" id="zanry" class="w-full">
+            <?php foreach ($this->data["zanry"] as $zanr): ?>
+                <option value="<?php echo $zanr["id_zanr"] ?>"><?php echo $zanr["jmeno_zanr"] ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
     <input
-        type="submit"
-        class="w-32 uppercase rounded bg-sky-600 text-white px-4 py-1.5 hover:cursor-pointer hover:bg-sky-700 transition"
-        value="Hledat"
+            type="submit"
+            class="w-32 uppercase rounded bg-sky-600 text-white px-4 py-1.5 hover:cursor-pointer hover:bg-sky-700 transition"
+            value="Hledat"
     />
 </form>

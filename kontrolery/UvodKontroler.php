@@ -3,11 +3,10 @@ class UvodKontroler extends Kontroler
 {
     public function zpracuj($parametry) {
         $this->pohled = "uvod";
-        $uvod = new Uvod();
-        $this->data["zanry"] = $uvod->vratZanry();
+        $knihyModel = new Knihy();
+        $this->nactiSpolecnaData();
         if (isset($_GET["zanry"])) {
-            $this->data["knihy"] = $uvod->vratKnihy();
-            $this->data["autori"] = $uvod->vratAutory();
+            $this->data["knihy"] = $knihyModel->vratKnihy();
         }
     }
 
