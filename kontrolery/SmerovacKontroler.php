@@ -29,9 +29,7 @@ class SmerovacKontroler extends Kontroler {
                 $this->pohled = "rozlozeni";
 
             } else { // třída kontroleru neexistuje
-
-                // přesměrujeme na chybový kontroler
-                // TODO
+                $this->presmeruj("uvod");
 
             }
         }

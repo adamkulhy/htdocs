@@ -1,12 +1,11 @@
 Options -Indexes
 
 RewriteEngine On
-RewriteBase /knihovna/
+RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Přesměruj vše kromě statických souborů do index.php s parametrem 'url'
 RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
 
 AddType application/x-httpd-php .php .phtml
