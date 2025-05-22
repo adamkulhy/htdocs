@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0d0231-bf98-4fd0-8385-3c6b53199f82" name="Changes" comment="presun do htdocs">
-      <change afterPath="$PROJECT_DIR$/modely/Autori.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modely/Knihy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modely/Zanry.php" afterDir="false" />
+    <list default="true" id="1d0d0231-bf98-4fd0-8385-3c6b53199f82" name="Changes" comment="pridani filtrovani knih">
+      <change afterPath="$PROJECT_DIR$/kontrolery/KnihaKontroler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modely/UploadService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pohledy/kniha.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kontrolery/Kontroler.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontrolery/Kontroler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kontrolery/PridaniKontroler.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontrolery/PridaniKontroler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kontrolery/UvodKontroler.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontrolery/UvodKontroler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modely/PridaniKnihy.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modely/Uvod.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modely/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/modely/Db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modely/Knihy.php" beforeDir="false" afterPath="$PROJECT_DIR$/modely/Knihy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pohledy/pridaniKnihy.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/pohledy/pridaniKnihy.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pohledy/rozlozeni.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/pohledy/rozlozeni.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pohledy/uvod.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/pohledy/uvod.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,22 +63,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/opt/lampp/htdocs",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.tailwindcss",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/adam&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/node_modules/.bin" />
@@ -108,7 +108,13 @@
       <workItem from="1747648582938" duration="125000" />
       <workItem from="1747648718214" duration="324000" />
       <workItem from="1747649050112" duration="23949000" />
-      <workItem from="1747738331056" duration="3821000" />
+      <workItem from="1747738331056" duration="4909000" />
+      <workItem from="1747804441347" duration="21000" />
+      <workItem from="1747827633030" duration="1597000" />
+      <workItem from="1747833532581" duration="972000" />
+      <workItem from="1747910888102" duration="482000" />
+      <workItem from="1747911649949" duration="71000" />
+      <workItem from="1747911886949" duration="8206000" />
     </task>
     <task id="LOCAL-00001" summary="presun do htdocs">
       <option name="closed" value="true" />
@@ -118,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747738417856</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="pridani filtrovani knih">
+      <option name="closed" value="true" />
+      <created>1747742460624</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747742460624</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +164,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="routovani + tailwind" />
     <MESSAGE value="presun do htdocs" />
-    <option name="LAST_COMMIT_MESSAGE" value="presun do htdocs" />
+    <MESSAGE value="pridani filtrovani knih" />
+    <option name="LAST_COMMIT_MESSAGE" value="pridani filtrovani knih" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -59,7 +59,7 @@ class Db {
     public static function vloz($tabulka, $parametry = array()) {
         return self::dotaz("INSERT INTO $tabulka (".
             implode(', ', array_keys($parametry)).
-            ") VALUES (".str_repeat('?,', sizeOf($parametry)-1)."?)",
+            ") VALUES (".str_repeat('?,', count($parametry)-1)."?)",
             array_values($parametry));
     }
 

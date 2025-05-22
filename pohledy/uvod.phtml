@@ -9,7 +9,6 @@
                     <label for="zanr<?= $zanr["id_zanr"] ?>" class="hover:cursor-pointer peer-checked:<?=darkenClass($zanr['bg-color'])?> block px-4 py-1.5 text-white rounded-md <?=$zanr['bg-color']?>">
                         <?= $zanr["jmeno_zanr"] ?>
                     </label>
-
                 </li>
             <?php endforeach;?>
         </ul>
@@ -36,12 +35,18 @@
         </div>
 
 
-        <div class="mt-4 grid grid-cols-2 items-center border border-b-0">
+        <div class="mt-4 grid grid-cols-3 items-center gap-4">
             <?php if (isset($this->data['knihy'])){
                 foreach ($this->data["knihy"] as $kniha):
                     $autor = $this->data["autori"][$kniha["id_aut"]-1]?>
-                    <div class="text-center border-r border-b"><?= $kniha["jmeno_knih"] ?></div>
-                    <div class="text-center border-b"><?= $autor[1] ." ". $autor[2] ?></div>
+                    <a href="kniha/<?= $kniha["id_knih"] ?>">
+                        <div class="flex flex-col items-center gap-2 border rounded py-5">
+
+                                <img src="uploads/<?= $kniha["id_knih"] ?>.jpg" alt="obrazek" class="w-32 h-40">
+                                <div class="text-center"><?= $kniha["jmeno_knih"] ?></div>
+                                <div class="text-center"><?= $autor[1] ." ". $autor[2] ?></div>
+                        </div>
+                    </a>
                 <?php endforeach;
             } ?>
         </div>
