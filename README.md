@@ -12,7 +12,7 @@ Webova aplikace pro ukladani a vyhledavani knize
 
 ```bash
 # Clone the repository to C:\Xampp\htdocs or /opt/lampp
-# Radeji pres ssh:
+# Radeji pres ssh(potreba linknout ssh key ke githubu):
 git clone git@github.com:yourusername/htdocs.git
 # nebo https:
 git clone https://github.com/yourusername/htdocs.git
