@@ -1,0 +1,168 @@
+<div class="flex gap-5">
+    <div>
+        <div class="text-center text-xl">Knihy</div>
+        <div>
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn text-sky-600 border rounded-md px-2" onclick="pridatKnihuModal.showModal()">Přidat knihu</button>
+            <dialog id="pridatKnihuModal" class="modal">
+                <div class="modal-box w-11/12 max-w-5xl">
+                    <form method="dialog">
+                        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    </form>
+                    <h1 class="text-2xl font-bold mb-8">Přidat knihu</h1>
+                    <form method="post" enctype="multipart/form-data" >
+                        <div class="relative mb-4 w-1/2">
+                            <input
+                                    type="text"
+                                    class=" peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none placeholder-transparent transition-all duration-200 ease-linear peer-focus:text-primary motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary"
+                                    id="jmeno_knih"
+                                    name="jmeno_knih"
+                                    placeholder="test"
+                            />
+                            <label
+                                    for="jmeno_knih"
+                                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] peer-placeholder-shown:text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.65rem] peer-placeholder-shown:-translate-y-0 scale-[0.8] peer-placeholder-shown:scale-[1] text-primary motion-reduce:transition-none"
+                            >Jméno knihy
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <label
+                                    for="knihaImg"
+                                    class="mb-2 inline-block text-neutral-500 dark:text-neutral-400"
+                            >Obrázek knihy</label
+                            >
+                            <input
+                                    class="relative m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border border-solid border-secondary-500 bg-transparent bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-surface transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:me-3 file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-e file:border-solid file:border-inherit file:bg-transparent file:px-3  file:py-[0.32rem] file:text-surface focus:border-primary focus:text-gray-700 focus:shadow-inset focus:outline-none dark:border-white/70 dark:text-white  file:dark:text-white"
+                                    type="file"
+                                    name="knihaImg"
+                                    id="knihaImg" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="autori">Autoři</label>
+                            <select name="id_aut" id="autori" class="w-full border rounded p-2">
+                                <option value="" disabled selected>--Vyber autora--</option>
+                                <?php foreach ($this->data["autori"] as $autor):?>
+                                    <option value="<?= $autor["id_aut"] ?>"><?= $autor["jmeno_aut"]." ".$autor["prijmeni_aut"] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="mb-3 ">
+                            <label for="zanry">Žánr</label>
+                            <select multiple name="id_zanr[]" id="zanry" class="w-full border rounded p-2">
+                                <?php foreach ($this->data["zanry"] as $zanr): ?>
+                                    <option value="<?= $zanr["id_zanr"] ?>"><?= $zanr["jmeno_zanr"] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="obsah_knih">Obsah knihy</label>
+                            <textarea name="obsah_knih" id="obsah_knih" cols="30" rows="10" class="border rounded w-full p-4"></textarea>
+                        </div>
+                        <input
+                                type="submit"
+                                class="w-32 uppercase rounded bg-sky-600 text-white px-4 py-1.5 hover:cursor-pointer hover:bg-sky-700 transition"
+                                value="Přidat"
+                        />
+                    </form>
+                </div>
+            </dialog>
+        </div>
+    </div>
+
+    <div>
+        <div class="text-center text-xl">Žánry</div>
+        <div>
+            <button class="btn text-sky-600 border rounded-md px-2" onclick="pridatZanrModal.showModal()">Přidat žánr</button>
+            <dialog id="pridatZanrModal" class="modal">
+                <div class="modal-box w-11/12 max-w-5xl">
+                    <form method="dialog">
+                        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    </form>
+                    <h1 class="text-2xl font-bold mb-8">Přidat žánr</h1>
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="relative mb-4 w-1/2">
+                            <input
+                                    type="text"
+                                    class=" peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none placeholder-transparent transition-all duration-200 ease-linear peer-focus:text-primary motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary"
+                                    id="jmeno_zanr"
+                                    name="jmeno_zanr"
+                                    placeholder="test"
+                            />
+                            <label
+                                    for="jmeno_zanr"
+                                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] peer-placeholder-shown:text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.65rem] peer-placeholder-shown:-translate-y-0 scale-[0.8] peer-placeholder-shown:scale-[1] text-primary motion-reduce:transition-none"
+                            >Jméno žánru
+                            </label>
+                        </div>
+                        <div>
+                            <label for="bg_color">Barva pozadí žánru:</label>
+                            <select name="bg_color" id="bg_color" class="w-full border rounded p-2 flex flex-col gap-2 mb-4">
+                                <option value="" disabled selected>--Vyber barvu--</option>
+                                <?php $colors = ["bg-red-500", "bg-yellow-500", "bg-green-500", "bg-blue-500", "bg-indigo-500", "bg-purple-500", "bg-pink-500", "bg-gray-500", "bg-red-900"];
+                                foreach ($colors as $color):?>
+                                    <option value="<?= $color ?>" class="<?= $color ?> text-white rounded"><?= substr($color, 3) ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <input
+                                type="submit"
+                                class="w-32 uppercase rounded bg-sky-600 text-white px-4 py-1.5 hover:cursor-pointer hover:bg-sky-700 transition"
+                                value="Přidat"
+                        />
+                    </form>
+                </div>
+            </dialog>
+        </div>
+    </div>
+
+    <div>
+        <div class="text-center text-xl">Autoři</div>
+        <div>
+            <button class="btn text-sky-600 border rounded-md px-2" onclick="pridatAutoraModal.showModal()">Přidat autora</button>
+            <dialog id="pridatAutoraModal" class="modal">
+                <div class="modal-box w-11/12 max-w-5xl">
+                    <form method="dialog">
+                        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    </form>
+                    <h1 class="text-2xl font-bold mb-8">Přidat Autora</h1>
+                    <form method="post">
+                        <div class="relative mb-4 w-1/2">
+                            <input
+                                    type="text"
+                                    class=" peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none placeholder-transparent transition-all duration-200 ease-linear peer-focus:text-primary motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary"
+                                    id="jmeno_aut"
+                                    name="jmeno_aut"
+                                    placeholder="test"
+                            />
+                            <label
+                                    for="jmeno_aut"
+                                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] peer-placeholder-shown:text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.65rem] peer-placeholder-shown:-translate-y-0 scale-[0.8] peer-placeholder-shown:scale-[1] text-primary motion-reduce:transition-none"
+                            >Jméno autora
+                            </label>
+                        </div>
+                        <div class="relative mb-4 w-1/2">
+                            <input
+                                    type="text"
+                                    class=" peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none placeholder-transparent transition-all duration-200 ease-linear peer-focus:text-primary motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary"
+                                    id="prijmeni_aut"
+                                    name="prijmeni_aut"
+                                    placeholder="test"
+                            />
+                            <label
+                                    for="prijmeni_aut"
+                                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] peer-placeholder-shown:text-neutral-500 transition-all duration-200 ease-out -translate-y-[0.65rem] peer-placeholder-shown:-translate-y-0 scale-[0.8] peer-placeholder-shown:scale-[1] text-primary motion-reduce:transition-none"
+                            >Příjmení autora
+                            </label>
+                        </div>
+                        <input
+                                type="submit"
+                                class="w-32 uppercase rounded bg-sky-600 text-white px-4 py-1.5 hover:cursor-pointer hover:bg-sky-700 transition"
+                                value="Přidat"
+                        />
+                    </form>
+                </div>
+            </dialog>
+        </div>
+    </div>
+</div>
+

@@ -15,7 +15,7 @@ $autor = $this->data["autori"][$kniha["id_aut"]-1];
             <?php foreach ($this->data["zanry"] as $zanr):
                 $checked = in_array($zanr['id_zanr'], $_GET['zanry'] ?? []) ? 'checked' : '';?>
                 <div>
-                    <div class="block px-2 py-1 text-white rounded-md <?=$zanr['bg-color']?>">
+                    <div class="block px-2 py-1 text-white rounded-md <?=$zanr['bg_color']?>">
                         <?= $zanr["jmeno_zanr"] ?>
                     </div>
                 </div>

@@ -16,8 +16,8 @@ abstract class Kontroler {
 
     protected function nactiSpolecnaData()
     {
-        $this->data["zanry"] = (new Zanry())->vratZanry();
-        $this->data["autori"] = (new Autori())->vratAutory();
+        $this->data["zanry"] = (new Zanr())->vratZanry();
+        $this->data["autori"] = (new Autor())->vratAutory();
     }
 
 }

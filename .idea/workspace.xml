@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0d0231-bf98-4fd0-8385-3c6b53199f82" name="Changes" comment="pridani filtrovani knih">
-      <change afterPath="$PROJECT_DIR$/kontrolery/KnihaKontroler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modely/UploadService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pohledy/kniha.phtml" afterDir="false" />
+    <list default="true" id="1d0d0231-bf98-4fd0-8385-3c6b53199f82" name="Changes" comment="pridavani knih, stranka kniha.phtml">
+      <change afterPath="$PROJECT_DIR$/modely/Zanr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pohledy/edit.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kontrolery/PridaniKontroler.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontrolery/PridaniKontroler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kontrolery/Kontroler.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontrolery/Kontroler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kontrolery/PridaniKontroler.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontrolery/EditKontroler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kontrolery/UvodKontroler.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontrolery/UvodKontroler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modely/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/modely/Db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modely/Knihy.php" beforeDir="false" afterPath="$PROJECT_DIR$/modely/Knihy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pohledy/pridaniKnihy.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/pohledy/pridaniKnihy.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modely/Autori.php" beforeDir="false" afterPath="$PROJECT_DIR$/modely/Autor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modely/Knihy.php" beforeDir="false" afterPath="$PROJECT_DIR$/modely/Kniha.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modely/Zanry.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pohledy/kniha.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/pohledy/kniha.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pohledy/pridaniKnihy.phtml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pohledy/rozlozeni.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/pohledy/rozlozeni.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pohledy/uvod.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/pohledy/uvod.phtml" afterDir="false" />
     </list>
@@ -68,7 +70,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/adam&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/adam/PhpstormProjects/platebniBrana&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -81,6 +83,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/node_modules/.bin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -114,7 +117,14 @@
       <workItem from="1747833532581" duration="972000" />
       <workItem from="1747910888102" duration="482000" />
       <workItem from="1747911649949" duration="71000" />
-      <workItem from="1747911886949" duration="8206000" />
+      <workItem from="1747911886949" duration="12321000" />
+      <workItem from="1747981442709" duration="64000" />
+      <workItem from="1747990283520" duration="1028000" />
+      <workItem from="1748256311676" duration="1000" />
+      <workItem from="1748261656251" duration="4334000" />
+      <workItem from="1748266000444" duration="56000" />
+      <workItem from="1748268771151" duration="1643000" />
+      <workItem from="1748335078256" duration="236000" />
     </task>
     <task id="LOCAL-00001" summary="presun do htdocs">
       <option name="closed" value="true" />
@@ -132,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747742460624</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="pridavani knih, stranka kniha.phtml">
+      <option name="closed" value="true" />
+      <created>1747920429518</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747920429518</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +183,8 @@
     <MESSAGE value="routovani + tailwind" />
     <MESSAGE value="presun do htdocs" />
     <MESSAGE value="pridani filtrovani knih" />
-    <option name="LAST_COMMIT_MESSAGE" value="pridani filtrovani knih" />
+    <MESSAGE value="pridavani knih, stranka kniha.phtml" />
+    <option name="LAST_COMMIT_MESSAGE" value="pridavani knih, stranka kniha.phtml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

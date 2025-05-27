@@ -2,13 +2,15 @@
 <form class="w-full mx-auto flex" method="GET">
     <div class="w-1/4">
         <ul class="flex flex-col items-center gap-2">
-            <?php foreach ($this->data["zanry"] as $zanr):
+            <?php  foreach ($this->data["zanry"] as $zanr):
                 $checked = in_array($zanr['id_zanr'], $_GET['zanry'] ?? []) ? 'checked' : '';?>
                 <li>
-                    <input id="zanr<?= $zanr["id_zanr"] ?>" class="hidden peer" type="checkbox" name="zanry[]" value=<?= $zanr["id_zanr"] ?> <?= $checked ?>>
-                    <label for="zanr<?= $zanr["id_zanr"] ?>" class="hover:cursor-pointer peer-checked:<?=darkenClass($zanr['bg-color'])?> block px-4 py-1.5 text-white rounded-md <?=$zanr['bg-color']?>">
-                        <?= $zanr["jmeno_zanr"] ?>
-                    </label>
+                    <button type="submit">
+                        <input id="zanr<?= $zanr["id_zanr"] ?>" class="hidden peer" type="checkbox" name="zanry[]" value=<?= $zanr["id_zanr"] ?> <?= $checked ?>>
+                        <label for="zanr<?= $zanr["id_zanr"] ?>" class="hover:cursor-pointer peer-checked:shadow-xl peer-checked:border-2 shadow-black block text-center w-24  py-1.5 text-white rounded-md <?=$zanr['bg_color']?>">
+                            <?= $zanr["jmeno_zanr"] ?>
+                        </label>
+                    </button>
                 </li>
             <?php endforeach;?>
         </ul>
