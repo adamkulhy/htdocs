@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0d0231-bf98-4fd0-8385-3c6b53199f82" name="Changes" comment="pridavani knih, stranka kniha.phtml">
-      <change afterPath="$PROJECT_DIR$/modely/Zanr.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pohledy/edit.phtml" afterDir="false" />
+    <list default="true" id="1d0d0231-bf98-4fd0-8385-3c6b53199f82" name="Changes" comment="uprava filtrovani zanry">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kontrolery/Kontroler.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontrolery/Kontroler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kontrolery/PridaniKontroler.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontrolery/EditKontroler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kontrolery/UvodKontroler.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontrolery/UvodKontroler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modely/Autori.php" beforeDir="false" afterPath="$PROJECT_DIR$/modely/Autor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modely/Knihy.php" beforeDir="false" afterPath="$PROJECT_DIR$/modely/Kniha.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modely/Zanry.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pohledy/kniha.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/pohledy/kniha.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pohledy/pridaniKnihy.phtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pohledy/rozlozeni.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/pohledy/rozlozeni.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pohledy/uvod.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/pohledy/uvod.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +113,7 @@
       <workItem from="1748261656251" duration="4334000" />
       <workItem from="1748266000444" duration="56000" />
       <workItem from="1748268771151" duration="1643000" />
-      <workItem from="1748335078256" duration="236000" />
+      <workItem from="1748335078256" duration="385000" />
     </task>
     <task id="LOCAL-00001" summary="presun do htdocs">
       <option name="closed" value="true" />
@@ -150,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747920429518</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="uprava filtrovani zanry">
+      <option name="closed" value="true" />
+      <created>1748335417239</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748335417239</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +181,8 @@
     <MESSAGE value="presun do htdocs" />
     <MESSAGE value="pridani filtrovani knih" />
     <MESSAGE value="pridavani knih, stranka kniha.phtml" />
-    <option name="LAST_COMMIT_MESSAGE" value="pridavani knih, stranka kniha.phtml" />
+    <MESSAGE value="uprava filtrovani zanry" />
+    <option name="LAST_COMMIT_MESSAGE" value="uprava filtrovani zanry" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
