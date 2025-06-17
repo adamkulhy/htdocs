@@ -6,8 +6,10 @@ class KnihaKontroler extends Kontroler
     {
         $this->nactiSpolecnaData();
         $idKnihy = $parametry[0] ?? null;
-        $this->data["zanry"] = Db::dotazVsechny("SELECT * FROM zanry z inner join kniha_zanr kz on kz.id_zanr = z.id_zanr WHERE kz.id_knih = ?", [$idKnihy]);
-        $kniha = Db::dotazJeden("SELECT * FROM knihy WHERE id_knih = ?", [$idKnihy]);
+        $zanrModel = new Zanr();
+        $knihaModel = new Kniha();
+        $this->data["zanry"] = $zanrModel->zanryKnihy($idKnihy);
+        $kniha = $knihaModel->najitKnihu($idKnihy);
         $this->data["kniha"] = $kniha;
         $this->pohled = "kniha";
     }

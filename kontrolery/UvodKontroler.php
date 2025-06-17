@@ -6,10 +6,9 @@ class UvodKontroler extends Kontroler
         $this->pohled = "uvod";
         $knihyModel = new Kniha();
         $this->nactiSpolecnaData();
-        if (isset($_GET["zanry"])) {
+        if (isset($_GET["zanry"]) || isset($_GET["vyhledavani"])) {
             $this->data["knihy"] = $knihyModel->vratKnihy();
         }
-
     }
 
 

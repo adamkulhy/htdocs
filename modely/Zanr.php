@@ -10,6 +10,13 @@ class Zanr
         return Db::dotazVsechny($sql);
     }
 
+    public function zanryKnihy($idKnihy) {
+        $sql = "SELECT *
+                FROM zanry z inner join kniha_zanr kz on kz.id_zanr = z.id_zanr 
+                WHERE kz.id_knih = ?";
+        return Db::dotazVsechny($sql, [$idKnihy]);
+    }
+
     public function pridatZanr($jmeno, $bg_color): void
     {
         Db::vloz("zanry", [

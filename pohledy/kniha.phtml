@@ -22,5 +22,60 @@ $autor = $this->data["autori"][$kniha["id_aut"]-1];
             <?php endforeach;?>
         </div>
         <div class="mt-6"><?= $kniha['obsah_knih'] ?></div>
+        <div>
+            <form>
+                    <div class="flex flex-row-reverse gap-1">
+                        <!-- Star 5 -->
+                        <input type="radio" name="rating" id="star5" value="5" class="peer/star5 hidden" />
+                        <label for="star5" class="cursor-pointer text-gray-300 peer-checked/star5:text-yellow-400 hover:text-yellow-400">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <polygon points="12,2 15,9 22,9 17,14 18,21 12,17 6,21 7,14 2,9 9,9" />
+                            </svg>
+                        </label>
+
+                        <!-- Star 4 -->
+                        <input type="radio" name="rating" id="star4" value="4" class="peer/star4 hidden" />
+                        <label for="star4" class="cursor-pointer text-gray-300 peer-checked/star4:text-yellow-400 hover:text-yellow-400">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <polygon points="12,2 15,9 22,9 17,14 18,21 12,17 6,21 7,14 2,9 9,9" />
+                            </svg>
+                        </label>
+
+                        <!-- Star 3 -->
+                        <input type="radio" name="rating" id="star3" value="3" class="peer/star3 hidden" />
+                        <label for="star3" class="cursor-pointer text-gray-300 peer-checked/star3:text-yellow-400 hover:text-yellow-400">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <polygon points="12,2 15,9 22,9 17,14 18,21 12,17 6,21 7,14 2,9 9,9" />
+                            </svg>
+                        </label>
+
+                        <!-- Star 2 -->
+                        <input type="radio" name="rating" id="star2" value="2" class="peer/star2 hidden" />
+                        <label for="star2" class="cursor-pointer text-gray-300 peer-checked/star2:text-yellow-400 hover:text-yellow-400">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <polygon points="12,2 15,9 22,9 17,14 18,21 12,17 6,21 7,14 2,9 9,9" />
+                            </svg>
+                        </label>
+
+                        <!-- Star 1 -->
+                        <input type="radio" name="rating" id="star1" value="1" class="peer/star1 hidden" />
+                        <label for="star1" class="cursor-pointer text-gray-300 peer-checked/star1:text-yellow-400 hover:text-yellow-400">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                <polygon points="12,2 15,9 22,9 17,14 18,21 12,17 6,21 7,14 2,9 9,9" />
+                            </svg>
+                        </label>
+                    </div>
+
+                <div>
+                    <label for="obsah_knih">Komentar</label>
+                    <textarea name="obsah_knih" id="obsah_knih" cols="30" rows="10" class="border rounded w-full p-4"></textarea>
+                </div>
+                <input
+                        type="submit"
+                        class="w-32 uppercase rounded bg-sky-600 text-white px-4 py-1.5 hover:cursor-pointer hover:bg-sky-700 transition"
+                        value="Přidat"
+                />
+            </form>
+        </div>
     </div>
 </div>

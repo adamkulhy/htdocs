@@ -4,7 +4,16 @@ class Kniha
 {
     public function vratKnihy() {
         $zanry = $_GET['zanry'] ?? [];
-        if ($zanry) {
+        if ($_GET["vyhledavani"]) {
+            $sql = "
+            SELECT k.*
+            FROM knihy k INNER JOIN autori a ON k.id_aut = a.id_aut
+            WHERE jmeno_knih LIKE ? or jmeno_aut LIKE ? or prijmeni_aut LIKE ? or CONCAT(jmeno_aut, ' ', prijmeni_aut) LIKE ?
+        ";
+
+            return Db::dotazVsechny($sql, ["%".$_GET["vyhledavani"]."%", "%".$_GET["vyhledavani"]."%","%".$_GET["vyhledavani"]."%","%".$_GET["vyhledavani"]."%"]);
+        }
+        else if ($zanry) {
             $placeholders = implode(',', array_fill(0, count($zanry), '?'));
             $sql = "
             SELECT k.*
@@ -43,9 +52,9 @@ class Kniha
         Db::zmen("knihy","WHERE id_knih = ?", [$_POST['id_knih']], ["jmeno_knih" => $_POST['jmeno_knih'], "id_aut" => $_POST['id_aut'], "obsah_knih" => $_POST['obsah_knih']]);
     }
 
-    public function najitKnihu()
+    public function najitKnihu($idKnihy)
     {
-        return Db::dotazJeden("SELECT * FROM knih WHERE id_knih = ?", [$_POST['id_knih']]);
+        return Db::dotazJeden("SELECT * FROM knihy WHERE id_knih = ?", [$idKnihy]);
     }
 
     public function smazatKnihu(): void
